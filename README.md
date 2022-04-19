@@ -61,7 +61,7 @@ cd LOC_PSE
 CUDA_VISIBLE_DEVICES=0 python moment_localization/test.py --cfg experiments/charades/charades-loc-pse.yaml --verbose --split test
 CUDA_VISIBLE_DEVICES=0 python moment_localization/test.py --cfg experiments/activitynet/activitynet-loc-pse.yaml --verbose --split test
 ```
-To reproduce the results using VGG and ResNet152 video features, please replace the charades-*.yaml with charades-\*-vgg.yaml and activitynet-\*.yaml with activitynet-*-resnet152.yaml respectively.
+To reproduce the results using VGG and ResNet152 video features, please replace the charades-*.yaml with charades-\*-vgg.yaml and activitynet-\*.yaml with activitynet-*-resnet152.yaml respectively. Besides, before evaluating LOC_PSE, please first evaluate CT-SP-MS to produce the last score curve which is loaded in the dataloader of LOC_PSE. Note that the score curve is not used during inferring, it is only used in the training stage of LOC_PSE.
 
 #### Training
 To re-train the models, please use the following commands:
