@@ -39,7 +39,7 @@ We also provide the VGG video feature for Charades-STA and ResNet152 video featu
 
 Our trained models are provided in [google drive](https://drive.google.com/drive/folders/1MrhgLLp7RXayUMkyXWQqsoe4zKjbxnxF?usp=sharing). Please download them and also untar them to the `WLML/` folder.
 
-Then, run the following commands for reproducing the above results:
+Then, run the following commands for reproducing the results in our paper:
 ```
 # Evaluate CT-SP-16L
 cd CT_SP
