@@ -61,7 +61,7 @@ cd LOC_PSE
 CUDA_VISIBLE_DEVICES=0 python moment_localization/test.py --cfg experiments/charades/charades-loc-pse.yaml --verbose --split test
 CUDA_VISIBLE_DEVICES=0 python moment_localization/test.py --cfg experiments/activitynet/activitynet-loc-pse.yaml --verbose --split test
 ```
-To reproduce the results using VGG and ResNet152 video features, please replace the charades-*.yaml with charades-*-vgg.yaml and activitynet-*.yaml with activitynet-*-resnet152.yaml respectively.
+To reproduce the results using VGG and ResNet152 video features, please replace the charades-*.yaml with charades-\*-vgg.yaml and activitynet-\*.yaml with activitynet-*-resnet152.yaml respectively.
 
 #### Training
 To re-train the models, please use the following commands:
@@ -93,4 +93,4 @@ CUDA_VISIBLE_DEVICES=0 python moment_localization/train.py --cfg experiments/act
 ```
 Note that after training the models for genrating matching score curves of the two scales, we need to set the MODEL.CHECKPOINT_2 and MODEL.CHECKPOINT_3 options in charades-ms.yaml or activitynet-ms.yaml to deploy the right models to fuse the score curves.
 
-To re-train the models using VGG and ResNet152 video features, please also replace the charades-*.yaml with charades-*-vgg.yaml and activitynet-*.yaml with activitynet-*-resnet152.yaml respectively.
+To re-train the models using VGG and ResNet152 video features, please also replace the charades-\*.yaml with charades-\*-vgg.yaml and activitynet-*.yaml with activitynet-*-resnet152.yaml respectively.
