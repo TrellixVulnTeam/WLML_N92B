@@ -68,7 +68,7 @@ class Charades(data.Dataset):
             for row in reader:
                 self.durations[row['id']] = float(row['length'])
 
-        anno_file = open(os.path.join(self.data_dir, "charades_sta_{}.txt".format(self.split).replace('train','train_sub_val')),'r')
+        anno_file = open(os.path.join(self.data_dir, "charades_sta_{}.txt".format(self.split)),'r')
         annotations = []
         max_sent_len = 0
         for line in anno_file:
@@ -121,7 +121,7 @@ class Charades(data.Dataset):
             self.video_sentence[key] = torch.from_numpy(hf[key][:]).float()
         hf.close()
 
-        hf = h5py.File(os.path.join(self.data_dir,'%s_annotation_sentences.h5'%self.split.replace('train','train_sub_val')), 'r')
+        hf = h5py.File(os.path.join(self.data_dir,'%s_annotation_sentences.h5'%self.split), 'r')
         self.annotation_sentences = torch.from_numpy(hf['data'][:]).float()
         print('annotation_sentences shape', self.annotation_sentences.shape)
         hf.close()
